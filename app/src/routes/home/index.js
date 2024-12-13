@@ -10,10 +10,10 @@ const ctrl = require('./home.crtl');
 // });
 
 // 컨트롤러 함수로 분리해서 작성한 코드
-router.get('/', ctrl.home);
+router.get('/', ctrl.output.home);
+router.get('/login', ctrl.output.login);
 
-router.get('/login', ctrl.login);
+router.post('/login', ctrl.process.login);
 
 // 외부파일에서 router를 사용할 수 있도록 export가 필요
 module.exports = router;
- 
