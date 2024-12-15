@@ -4,12 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- defer-> queryselector로 값을 가져오기 전에 값을 불러오는 다른 로직이 먼저 실행되는 문제 방지위해 사용 -->
+    <link rel="stylesheet" href="/css/home/login.css" />
     <script src="/js/home/login.js" defer></script>
     <title>Document</title>
   </head>
   <body>
-    <input id="id" type="text" placeholder="아이디" /><br />
-    <input id="password" type="text" placeholder="비밀번호" /><br />
-    <button>로그인</button>
+    <div class="login-page">
+      <div class="form">
+        <form class="login-form">
+          <input id="id" placeholder="아이디" />
+          <input id="password" type="password" placeholder="비밀번호" />
+          <button>login</button>
+          <p class="message">
+            Not registered? <a href="/register">Create an account</a>
+          </p>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
