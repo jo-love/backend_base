@@ -19,9 +19,9 @@ const output = {
 
 // 프론트단에서 데이터를 받아서 처리하는 부분이니까 process
 const process = {
-  login: (req, res) => {
+  login: async (req, res) => {
     const user = new User(req.body);
-    const response = user.login();
+    const response = await user.login();
     return res.json(response);
   },
   register: (req, res) => {
